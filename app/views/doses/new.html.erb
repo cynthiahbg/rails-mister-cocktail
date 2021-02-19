@@ -1,0 +1,10 @@
+<h1>Tell me what I need</h1>
+
+<div>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient %>
+    <%= f.label :description, "How much do we need?" %>
+    <%= f.text_field :description %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

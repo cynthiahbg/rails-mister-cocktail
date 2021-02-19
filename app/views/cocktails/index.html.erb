@@ -1,0 +1,25 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/22/13/gin-cocktails.jpg?width=990&auto=webp&quality=75);">
+  <div class="container">
+    <h1>Discover our exquisite selection</h1>
+    <p>Give every moment that Friday-night-feeling with one (or many) of our hand-picked, amazing cocktails</p>
+    <br>
+    <button class="btn btn-flat"><%= link_to "Mix your own", new_cocktail_path(@cocktail) %></button>
+  </div>
+</div>
+
+
+<div class="container">
+  <br>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-lg-4 my-3">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://trinkreif.de/wp-content/uploads/bloody-mary-cocktail-rezept.webp)">
+          <%= link_to  cocktail.name, cocktail_path(cocktail) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
